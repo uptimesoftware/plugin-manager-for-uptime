@@ -1,0 +1,9 @@
+name=Enhanced Log File Monitor
+version=1.6
+platforms=windows linux solaris
+description=Monitor super-large text/log files easily
+restartCore=false
+requiresAgentScript=false
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false
+enablePHPExtensions=;

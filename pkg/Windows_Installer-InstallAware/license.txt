@@ -1,0 +1,17 @@
+Wait, we're almost done!
+
+Follow the steps below to complete the installation:
+
+1. Login to the up.time monitoring station interface
+   http://localhost:9999
+2. Click on the following menu options: Config > up.time Configuration
+3. Paste the following to integrate the Plugin Manager to up.time:
+
+myportal.custom.tab1.enabled=true
+myportal.custom.tab1.name=up.time Plugin Manager
+myportal.custom.tab1.URL=http://<HOSTNAME/IP>:9999/plugin_manager/
+
+4. Click the Update button
+
+You can now use the Plugin Manager by clicking on 
+My Portal > up.time Plugin Manager tab in the up.time interface.

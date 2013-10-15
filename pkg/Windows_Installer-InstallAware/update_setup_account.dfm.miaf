@@ -1,0 +1,14 @@
+IF (UserName.Text <> )  THEN  Next.Enabled := True;
+IF (Password.Text = PasswordConfirm.Text)  THEN  Next.Enabled := True;
+IF (Password.Text = )  THEN  Exclamation.Visible := True;
+IF (Password.Text = )  THEN  ExclamationText.Visible := True;
+IF (Password.Text <> PasswordConfirm.Text)  THEN  Next.Enabled := False;
+IF (Password.Text <> )  THEN  ExclamationText.Visible := false;
+IF (Password.Text <> )  THEN  Exclamation.Visible := false;
+IF (UserName.Text = )  THEN  Next.Enabled := False;
+IF (Glass.Caption <> TRUE)  THEN  Separator.Visible := True;
+IF (Glass.Caption <> TRUE)  THEN  InstallAware.Visible := True;
+IF (Glass.Caption = TRUE)  THEN  Install.Visible := True;
+IF (Glass.Caption = TRUE)  THEN  Separator.Visible := False;
+IF (Glass.Caption = TRUE)  THEN  InstallAware.Visible := False;
+IF (Glass.Caption <> TRUE)  THEN  Install.Visible := False;

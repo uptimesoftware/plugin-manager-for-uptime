@@ -1,0 +1,52 @@
+<project name="plugin-manager" default="dist">
+
+	<property name="build" location="${basedir}" />
+	<property name="src" location="${basedir}/../src" />
+	<property name="dist" location="${basedir}/../dist" />
+	<property name="installer.dist" location="${dist}/installer" />
+	<property name="installer.build" value="${build}/installers" />
+	<property name="installer.root" location="${basedir}/../pkg/Windows_Installer-InstallAware" />
+	<property name="installer.project" value="${installer.root}/Plugin Manager.mpr" />
+	<property name="installer.executable" value="C:/Program Files (x86)/InstallAware/InstallAware 12/miabuild.exe" />
+	<property name="version.properties" value="${build}/version.properties" />
+
+	<!-- Load version properties -->
+	<loadproperties srcFile="${version.properties}" />
+
+	<target name="init">
+		<mkdir dir="${dist}" />
+		<mkdir dir="${installer.dist}" />
+		<mkdir dir="${installer.build}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${dist}" />
+	</target>
+
+	<target name="installer" depends="init">
+		<echo message="${installer.project}" />
+		<exec executable="${installer.executable}">
+			<arg value="${installer.project}" />
+			<arg value="/o=${installer.build}" />
+			<arg value="/b=1" />
+			<arg value="/r" />
+			<arg value="IADIR='${installer.root}'" />
+			<arg value="PROJDIR='${installer.root}'" />
+			<arg value="MAJOR=${major.version.number}" />
+			<arg value="MINOR=${minor.version.number}" />
+			<arg value="REVISION=${revision.version.number}" />
+			<arg value="BUILD=${buildNumber}" />
+			<arg value="SRCDIR=${src}/plugin_manager" />
+			<arg value="COMMANDLINEBUILD=TRUE" />
+		</exec>
+	</target>
+
+	<target name="dist" depends="installer">
+		<property name="installer.filename" value="" />
+		<property name="generated-windows-installer" location="${installer.build}/Release/Single/${installer.filename}" />
+
+		<echo message="Copying ${generated-windows-installer} to ${installer.dist}/${installer.filename}..." />
+		<copy file="${generated-windows-installer}" todir="${installer.dist}" />
+		<echo message="Copying was successful." />
+	</target>
+</project>

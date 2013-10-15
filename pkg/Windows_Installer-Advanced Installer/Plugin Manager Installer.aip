@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="8.3" version="8.3" Modules="professional" RootPath="." Language="en" Id="{EB29B354-496E-4805-862B-888CD029697F}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_CF_TYPE" Value="2" MultiBuildValue="DefaultBuild:0" Type="4" MsiKey="AI_CF_TYPE"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_FrameBtnsColor" Value="powderblue" MsiKey="AI_FrameBtnsColor"/>
+    <ROW Property="AI_FrameColor" Value="powderblue" MsiKey="AI_FrameColor"/>
+    <ROW Property="AI_ImagesColor" Value="powderblue" MsiKey="AI_ImagesColor"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="[|ProductName]"/>
+    <ROW Property="AI_ThemeStyle" Value="default" MsiKey="AI_ThemeStyle"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="ALLUSERS" Value="2" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPHELPLINK" Value="http://support.uptimesoftware.com/the-grid"/>
+    <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPPRODUCTICON" Value="favicon.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="CTRLS" Value="1"/>
+    <ROW Property="MSIFASTINSTALL" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="Manufacturer" Value="uptime software" ValueLocId="*"/>
+    <ROW Property="ProductCode" Value="1033:{7510DBF5-9151-4DDD-8F67-3011195FDD2D} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="up.time Plugin Manager" ValueLocId="*"/>
+    <ROW Property="ProductVersion" Value="1.0.6"/>
+    <ROW Property="REBOOT" MultiBuildValue="DefaultBuild:ReallySuppress"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{ADE2FBAB-FE8F-49F7-878A-A42809ECDACC}"/>
+    <ROW Property="VIEWREADME" Value="1" Type="4"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows NT 4.0, Windows NT 4.0 Service Pack 1, Windows NT 4.0 Service Pack 2, Windows NT 4.0 Service Pack 3, Windows NT 4.0 Service Pack 4, Windows NT 4.0 Service Pack 5, Windows NT 4.0 Service Pack 6" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="GUI_1_Dir" Directory_Parent="UPTIME" DefaultDir="GUI"/>
+    <ROW Directory="GUI_Dir" Directory_Parent="plugin_manager_Dir" DefaultDir="GUI"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="Smarty_3.1.8_Dir" Directory_Parent="plugin_manager_Dir" DefaultDir="Smarty~1.8|Smarty-3.1.8"/>
+    <ROW Directory="Smarty_GUI_templates_Dir" Directory_Parent="plugin_manager_Dir" DefaultDir="Smarty~1|Smarty-GUI-templates"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="UPTIME" Directory_Parent="TARGETDIR" DefaultDir="UPTIME" IsPseudoRoot="1"/>
+    <ROW Directory="bin_Dir" Directory_Parent="plugin_manager_Dir" DefaultDir="bin"/>
+    <ROW Directory="configs_Dir" Directory_Parent="demo_Dir" DefaultDir="configs"/>
+    <ROW Directory="demo_Dir" Directory_Parent="Smarty_3.1.8_Dir" DefaultDir="demo"/>
+    <ROW Directory="images_2_Dir" Directory_Parent="plugin_manager_3_Dir" DefaultDir="images"/>
+    <ROW Directory="images_Dir" Directory_Parent="plugin_manager_1_Dir" DefaultDir="images"/>
+    <ROW Directory="libs_Dir" Directory_Parent="Smarty_3.1.8_Dir" DefaultDir="libs"/>
+    <ROW Directory="plugin_manager_1_Dir" Directory_Parent="GUI_Dir" DefaultDir="plugin~1|plugin_manager"/>
+    <ROW Directory="plugin_manager_3_Dir" Directory_Parent="GUI_1_Dir" DefaultDir="plugin~1|plugin_manager"/>
+    <ROW Directory="plugin_manager_Dir" Directory_Parent="UPTIME" DefaultDir="plugin~1|plugin_manager"/>
+    <ROW Directory="plugins_1_Dir" Directory_Parent="libs_Dir" DefaultDir="plugins"/>
+    <ROW Directory="plugins_Dir" Directory_Parent="demo_Dir" DefaultDir="plugins"/>
+    <ROW Directory="sysplugins_Dir" Directory_Parent="libs_Dir" DefaultDir="sysplu~1|sysplugins"/>
+    <ROW Directory="templates_Dir" Directory_Parent="demo_Dir" DefaultDir="templa~1|templates"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_CustomARPName" ComponentId="{E8876875-B6EA-4A95-AA7B-9023EE97FADB}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{1D2D47F7-8FFA-4596-9D43-2546EEE2B09C}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="CmdsPassword" ComponentId="{E1A50D83-4D45-430B-BBA0-FD017594B223}" Directory_="APPDIR" Attributes="4" KeyPath="CmdsPassword"/>
+    <ROW Component="CmdsPassword_1" ComponentId="{3992A75F-F867-4964-9A0B-274EA6A57220}" Directory_="APPDIR" Attributes="4" KeyPath="CmdsPassword_1"/>
+    <ROW Component="agent_password.inc" ComponentId="{01CB2DA2-C1D5-49C6-96F9-4AE4788436DC}" Directory_="plugin_manager_Dir" Attributes="0" KeyPath="agent_password.inc" Type="0"/>
+    <ROW Component="block.textformat.php" ComponentId="{18B65168-9732-4602-91B1-025ADAF82B16}" Directory_="plugins_1_Dir" Attributes="0" KeyPath="block.textformat.php" Type="0"/>
+    <ROW Component="cacheresource.apc.php" ComponentId="{F8839459-DA03-4161-80E7-6B769C777D9B}" Directory_="plugins_Dir" Attributes="0" KeyPath="cacheresource.apc.php" Type="0"/>
+    <ROW Component="change_log.txt" ComponentId="{A4988333-A17D-4246-8EC1-70E140573E6E}" Directory_="Smarty_3.1.8_Dir" Attributes="0" KeyPath="change_log.txt" Type="0"/>
+    <ROW Component="debug.tpl" ComponentId="{CA3E49A2-4FFF-4449-845A-5212003E0238}" Directory_="libs_Dir" Attributes="0" KeyPath="debug.tpl" Type="0"/>
+    <ROW Component="delete_plugin.php" ComponentId="{9EE34830-E6B6-4C96-8D5A-F7976D676173}" Directory_="plugin_manager_1_Dir" Attributes="0" KeyPath="delete_plugin.php" Type="0"/>
+    <ROW Component="delete_plugin.php_2" ComponentId="{DE749696-F106-4266-BD70-3E8F0CC51DDC}" Directory_="plugin_manager_3_Dir" Attributes="0" KeyPath="delete_plugin.php_2" Type="0"/>
+    <ROW Component="delete_plugin.tpl" ComponentId="{351306A4-990A-49F2-9EAC-E49D1DF7D08C}" Directory_="Smarty_GUI_templates_Dir" Attributes="0" KeyPath="delete_plugin.tpl" Type="0"/>
+    <ROW Component="flaming_logo.gif" ComponentId="{F3670281-38E3-4EE4-93AD-8C8DE73B9A28}" Directory_="images_Dir" Attributes="0" KeyPath="flaming_logo.gif" Type="0"/>
+    <ROW Component="flaming_logo.gif_2" ComponentId="{5632C553-9831-4197-8FD7-C8C3227BD5DE}" Directory_="images_2_Dir" Attributes="0" KeyPath="flaming_logo.gif_2" Type="0"/>
+    <ROW Component="footer.tpl" ComponentId="{0E2E994C-F97B-4877-9206-C9AC5B15C432}" Directory_="templates_Dir" Attributes="0" KeyPath="footer.tpl" Type="0"/>
+    <ROW Component="index.php" ComponentId="{D44078CE-9A9B-4EC5-80EA-950F2E1B57A0}" Directory_="demo_Dir" Attributes="0" KeyPath="index.php" Type="0"/>
+    <ROW Component="readme.txt" ComponentId="{2C852087-BE6C-4CF0-9109-D6204160CBBF}" Directory_="plugin_manager_Dir" Attributes="0" KeyPath="readme.txt"/>
+    <ROW Component="restart_core.bin" ComponentId="{20DAD004-8258-4F23-B86F-E2C2B6BB1DDA}" Directory_="bin_Dir" Attributes="0" KeyPath="restart_core.bin" Type="0"/>
+    <ROW Component="smarty_cacheresource.php" ComponentId="{0208539B-6909-4ACF-88E9-4B0AB74E84EB}" Directory_="sysplugins_Dir" Attributes="0" KeyPath="smarty_cacheresource.php" Type="0"/>
+    <ROW Component="test.conf" ComponentId="{AB2FC5AC-A225-41E0-ABC8-E70DB2806E70}" Directory_="configs_Dir" Attributes="0" KeyPath="test.conf" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="PluginManagerFiles" Title="Plugin Manager Files" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_ExePath CmdsPassword CmdsPassword_1 agent_password.inc block.textformat.php cacheresource.apc.php change_log.txt debug.tpl delete_plugin.php delete_plugin.php_2 delete_plugin.tpl flaming_logo.gif flaming_logo.gif_2 footer.tpl index.php readme.txt restart_core.bin smarty_cacheresource.php test.conf"/>
+    <ATTRIBUTE name="CurrentFeature" value="PluginManagerFiles"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="COPYING.lib" Component_="change_log.txt" FileName="COPYING.lib" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\COPYING.lib" SelfReg="false" NextFile="test.conf"/>
+    <ROW File="README" Component_="change_log.txt" FileName="README" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\README" SelfReg="false" NextFile="SMARTY_2_BC_NOTES.txt"/>
+    <ROW File="SMARTY_2_BC_NOTES.txt" Component_="change_log.txt" FileName="SMARTY~1.txt|SMARTY_2_BC_NOTES.txt" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\SMARTY_2_BC_NOTES.txt" SelfReg="false" NextFile="SMARTY_3.0_BC_NOTES.txt"/>
+    <ROW File="SMARTY_3.0_BC_NOTES.txt" Component_="change_log.txt" FileName="SMARTY~2.txt|SMARTY_3.0_BC_NOTES.txt" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\SMARTY_3.0_BC_NOTES.txt" SelfReg="false" NextFile="SMARTY_3.1_NOTES.txt"/>
+    <ROW File="SMARTY_3.1_NOTES.txt" Component_="change_log.txt" FileName="SMARTY~3.txt|SMARTY_3.1_NOTES.txt" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\SMARTY_3.1_NOTES.txt" SelfReg="false" NextFile="delete_plugin.tpl"/>
+    <ROW File="Smarty.class.php" Component_="debug.tpl" FileName="Smarty~1.php|Smarty.class.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\Smarty.class.php" SelfReg="false" NextFile="SmartyBC.class.php"/>
+    <ROW File="SmartyBC.class.php" Component_="debug.tpl" FileName="Smarty~2.php|SmartyBC.class.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\SmartyBC.class.php" SelfReg="false" NextFile="smarty_cacheresource.php"/>
+    <ROW File="Thumbs.db" Component_="flaming_logo.gif" FileName="Thumbs.db" Attributes="6" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\images\Thumbs.db" SelfReg="false" NextFile="index.php_1"/>
+    <ROW File="agent_password.inc" Component_="agent_password.inc" FileName="agent_~1.inc|agent_password.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\agent_password.inc" SelfReg="false" NextFile="check_php_libs.php"/>
+    <ROW File="block.textformat.php" Component_="block.textformat.php" FileName="blockt~1.php|block.textformat.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\block.textformat.php" SelfReg="false" NextFile="function.counter.php"/>
+    <ROW File="cacheresource.apc.php" Component_="cacheresource.apc.php" FileName="cacher~1.php|cacheresource.apc.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\cacheresource.apc.php" SelfReg="false" NextFile="cacheresource.memcache.php"/>
+    <ROW File="cacheresource.memcache.php" Component_="cacheresource.apc.php" FileName="cacher~2.php|cacheresource.memcache.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\cacheresource.memcache.php" SelfReg="false" NextFile="cacheresource.mysql.php"/>
+    <ROW File="cacheresource.mysql.php" Component_="cacheresource.apc.php" FileName="cacher~3.php|cacheresource.mysql.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\cacheresource.mysql.php" SelfReg="false" NextFile="resource.extendsall.php"/>
+    <ROW File="change_log.txt" Component_="change_log.txt" FileName="change~1.txt|change_log.txt" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\change_log.txt" SelfReg="false" NextFile="COPYING.lib"/>
+    <ROW File="check_php_libs.php" Component_="agent_password.inc" FileName="check_~1.php|check_php_libs.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\check_php_libs.php" SelfReg="false" NextFile="fix_missing_GUI_files.bat"/>
+    <ROW File="debug.tpl" Component_="debug.tpl" FileName="debug.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\debug.tpl" SelfReg="false" NextFile="block.textformat.php"/>
+    <ROW File="delete_plugin.php" Component_="delete_plugin.php" FileName="delete~1.php|delete_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\delete_plugin.php" SelfReg="false" NextFile="header.php"/>
+    <ROW File="delete_plugin.php_2" Component_="delete_plugin.php_2" FileName="delete~1.php|delete_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\delete_plugin.php" SelfReg="false" NextFile="header.php_2"/>
+    <ROW File="delete_plugin.tpl" Component_="delete_plugin.tpl" FileName="delete~1.tpl|delete_plugin.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\delete_plugin.tpl" SelfReg="false" NextFile="index.tpl_1"/>
+    <ROW File="fix_missing_GUI_files.bat" Component_="agent_password.inc" FileName="fix_mi~1.bat|fix_missing_GUI_files.bat" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\fix_missing_GUI_files.bat" SelfReg="false" NextFile="fix_missing_GUI_files.sh"/>
+    <ROW File="fix_missing_GUI_files.sh" Component_="agent_password.inc" FileName="fix_mi~1.sh|fix_missing_GUI_files.sh" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\fix_missing_GUI_files.sh" SelfReg="false" NextFile="load_plugin.bat"/>
+    <ROW File="flaming_logo.gif" Component_="flaming_logo.gif" FileName="flamin~1.gif|flaming-logo.gif" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\images\flaming-logo.gif" SelfReg="false" NextFile="icon_trash.gif"/>
+    <ROW File="flaming_logo.gif_2" Component_="flaming_logo.gif_2" FileName="flamin~1.gif|flaming-logo.gif" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\images\flaming-logo.gif" SelfReg="false" NextFile="icon_trash.gif_2"/>
+    <ROW File="footer.tpl" Component_="footer.tpl" FileName="footer.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\templates\footer.tpl" SelfReg="false" NextFile="header.tpl"/>
+    <ROW File="function.counter.php" Component_="block.textformat.php" FileName="functi~1.php|function.counter.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.counter.php" SelfReg="false" NextFile="function.cycle.php"/>
+    <ROW File="function.cycle.php" Component_="block.textformat.php" FileName="functi~2.php|function.cycle.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.cycle.php" SelfReg="false" NextFile="function.fetch.php"/>
+    <ROW File="function.fetch.php" Component_="block.textformat.php" FileName="functi~3.php|function.fetch.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.fetch.php" SelfReg="false" NextFile="function.html_checkboxes.php"/>
+    <ROW File="function.html_checkboxes.php" Component_="block.textformat.php" FileName="functi~4.php|function.html_checkboxes.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_checkboxes.php" SelfReg="false" NextFile="function.html_image.php"/>
+    <ROW File="function.html_image.php" Component_="block.textformat.php" FileName="functi~5.php|function.html_image.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_image.php" SelfReg="false" NextFile="function.html_options.php"/>
+    <ROW File="function.html_options.php" Component_="block.textformat.php" FileName="functi~6.php|function.html_options.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_options.php" SelfReg="false" NextFile="function.html_radios.php"/>
+    <ROW File="function.html_radios.php" Component_="block.textformat.php" FileName="functi~7.php|function.html_radios.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_radios.php" SelfReg="false" NextFile="function.html_select_date.php"/>
+    <ROW File="function.html_select_date.php" Component_="block.textformat.php" FileName="functi~8.php|function.html_select_date.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_select_date.php" SelfReg="false" NextFile="function.html_select_time.php"/>
+    <ROW File="function.html_select_time.php" Component_="block.textformat.php" FileName="functi~9.php|function.html_select_time.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_select_time.php" SelfReg="false" NextFile="function.html_table.php"/>
+    <ROW File="function.html_table.php" Component_="block.textformat.php" FileName="funct~10.php|function.html_table.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.html_table.php" SelfReg="false" NextFile="function.mailto.php"/>
+    <ROW File="function.mailto.php" Component_="block.textformat.php" FileName="funct~11.php|function.mailto.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.mailto.php" SelfReg="false" NextFile="function.math.php"/>
+    <ROW File="function.math.php" Component_="block.textformat.php" FileName="funct~12.php|function.math.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\function.math.php" SelfReg="false" NextFile="modifier.capitalize.php"/>
+    <ROW File="header.php" Component_="delete_plugin.php" FileName="header.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\header.php" SelfReg="false" NextFile="flaming_logo.gif"/>
+    <ROW File="header.php_2" Component_="delete_plugin.php_2" FileName="header.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\header.php" SelfReg="false" NextFile="flaming_logo.gif_2"/>
+    <ROW File="header.tpl" Component_="footer.tpl" FileName="header.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\templates\header.tpl" SelfReg="false" NextFile="index.tpl"/>
+    <ROW File="icon_trash.gif" Component_="flaming_logo.gif" FileName="icon-t~1.gif|icon-trash.gif" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\images\icon-trash.gif" SelfReg="false" NextFile="Thumbs.db"/>
+    <ROW File="icon_trash.gif_2" Component_="flaming_logo.gif_2" FileName="icon-t~1.gif|icon-trash.gif" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\images\icon-trash.gif" SelfReg="false" NextFile="index.php_4"/>
+    <ROW File="index.php" Component_="index.php" FileName="index.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\index.php" SelfReg="false" NextFile="cacheresource.apc.php"/>
+    <ROW File="index.php_1" Component_="delete_plugin.php" FileName="index.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\index.php" SelfReg="false" NextFile="info.php"/>
+    <ROW File="index.php_4" Component_="delete_plugin.php_2" FileName="index.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\index.php" SelfReg="false" NextFile="info.php_2"/>
+    <ROW File="index.tpl" Component_="footer.tpl" FileName="index.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\templates\index.tpl" SelfReg="false" NextFile="debug.tpl"/>
+    <ROW File="index.tpl_1" Component_="delete_plugin.tpl" FileName="index.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\index.tpl" SelfReg="false" NextFile="info.tpl"/>
+    <ROW File="info.php" Component_="delete_plugin.php" FileName="info.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\info.php" SelfReg="false" NextFile="setup_directories.inc"/>
+    <ROW File="info.php_2" Component_="delete_plugin.php_2" FileName="info.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\info.php" SelfReg="false" NextFile="setup_directories.inc_2"/>
+    <ROW File="info.tpl" Component_="delete_plugin.tpl" FileName="info.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\info.tpl" SelfReg="false" NextFile="install_package.tpl"/>
+    <ROW File="install_package.tpl" Component_="delete_plugin.tpl" FileName="instal~1.tpl|install_package.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\install_package.tpl" SelfReg="false" NextFile="package_info.tpl"/>
+    <ROW File="load_plugin.bat" Component_="agent_password.inc" FileName="load_p~1.bat|load_plugin.bat" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\load_plugin.bat" SelfReg="false" NextFile="load_plugin.php"/>
+    <ROW File="load_plugin.php" Component_="agent_password.inc" FileName="load_p~1.php|load_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\load_plugin.php" SelfReg="false" NextFile="load_plugin.sh"/>
+    <ROW File="load_plugin.sh" Component_="agent_password.inc" FileName="load_p~1.sh|load_plugin.sh" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\load_plugin.sh" SelfReg="false" NextFile="pdb_functions.inc"/>
+    <ROW File="modifier.capitalize.php" Component_="block.textformat.php" FileName="modifi~1.php|modifier.capitalize.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.capitalize.php" SelfReg="false" NextFile="modifier.date_format.php"/>
+    <ROW File="modifier.date_format.php" Component_="block.textformat.php" FileName="modifi~2.php|modifier.date_format.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.date_format.php" SelfReg="false" NextFile="modifier.debug_print_var.php"/>
+    <ROW File="modifier.debug_print_var.php" Component_="block.textformat.php" FileName="modifi~3.php|modifier.debug_print_var.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.debug_print_var.php" SelfReg="false" NextFile="modifier.escape.php"/>
+    <ROW File="modifier.escape.php" Component_="block.textformat.php" FileName="modifi~4.php|modifier.escape.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.escape.php" SelfReg="false" NextFile="modifier.regex_replace.php"/>
+    <ROW File="modifier.regex_replace.php" Component_="block.textformat.php" FileName="modifi~5.php|modifier.regex_replace.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.regex_replace.php" SelfReg="false" NextFile="modifier.replace.php"/>
+    <ROW File="modifier.replace.php" Component_="block.textformat.php" FileName="modifi~6.php|modifier.replace.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.replace.php" SelfReg="false" NextFile="modifier.spacify.php"/>
+    <ROW File="modifier.spacify.php" Component_="block.textformat.php" FileName="modifi~7.php|modifier.spacify.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.spacify.php" SelfReg="false" NextFile="modifier.truncate.php"/>
+    <ROW File="modifier.truncate.php" Component_="block.textformat.php" FileName="modifi~8.php|modifier.truncate.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifier.truncate.php" SelfReg="false" NextFile="modifiercompiler.cat.php"/>
+    <ROW File="modifiercompiler.cat.php" Component_="block.textformat.php" FileName="modifi~9.php|modifiercompiler.cat.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.cat.php" SelfReg="false" NextFile="modifiercompiler.count_characters.php"/>
+    <ROW File="modifiercompiler.count_characters.php" Component_="block.textformat.php" FileName="modif~10.php|modifiercompiler.count_characters.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.count_characters.php" SelfReg="false" NextFile="modifiercompiler.count_paragraphs.php"/>
+    <ROW File="modifiercompiler.count_paragraphs.php" Component_="block.textformat.php" FileName="modif~11.php|modifiercompiler.count_paragraphs.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.count_paragraphs.php" SelfReg="false" NextFile="modifiercompiler.count_sentences.php"/>
+    <ROW File="modifiercompiler.count_sentences.php" Component_="block.textformat.php" FileName="modif~12.php|modifiercompiler.count_sentences.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.count_sentences.php" SelfReg="false" NextFile="modifiercompiler.count_words.php"/>
+    <ROW File="modifiercompiler.count_words.php" Component_="block.textformat.php" FileName="modif~13.php|modifiercompiler.count_words.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.count_words.php" SelfReg="false" NextFile="modifiercompiler.default.php"/>
+    <ROW File="modifiercompiler.default.php" Component_="block.textformat.php" FileName="modif~14.php|modifiercompiler.default.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.default.php" SelfReg="false" NextFile="modifiercompiler.escape.php"/>
+    <ROW File="modifiercompiler.escape.php" Component_="block.textformat.php" FileName="modif~15.php|modifiercompiler.escape.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.escape.php" SelfReg="false" NextFile="modifiercompiler.from_charset.php"/>
+    <ROW File="modifiercompiler.from_charset.php" Component_="block.textformat.php" FileName="modif~16.php|modifiercompiler.from_charset.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.from_charset.php" SelfReg="false" NextFile="modifiercompiler.indent.php"/>
+    <ROW File="modifiercompiler.indent.php" Component_="block.textformat.php" FileName="modif~17.php|modifiercompiler.indent.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.indent.php" SelfReg="false" NextFile="modifiercompiler.lower.php"/>
+    <ROW File="modifiercompiler.lower.php" Component_="block.textformat.php" FileName="modif~18.php|modifiercompiler.lower.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.lower.php" SelfReg="false" NextFile="modifiercompiler.noprint.php"/>
+    <ROW File="modifiercompiler.noprint.php" Component_="block.textformat.php" FileName="modif~19.php|modifiercompiler.noprint.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.noprint.php" SelfReg="false" NextFile="modifiercompiler.string_format.php"/>
+    <ROW File="modifiercompiler.string_format.php" Component_="block.textformat.php" FileName="modif~20.php|modifiercompiler.string_format.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.string_format.php" SelfReg="false" NextFile="modifiercompiler.strip.php"/>
+    <ROW File="modifiercompiler.strip.php" Component_="block.textformat.php" FileName="modif~21.php|modifiercompiler.strip.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.strip.php" SelfReg="false" NextFile="modifiercompiler.strip_tags.php"/>
+    <ROW File="modifiercompiler.strip_tags.php" Component_="block.textformat.php" FileName="modif~22.php|modifiercompiler.strip_tags.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.strip_tags.php" SelfReg="false" NextFile="modifiercompiler.to_charset.php"/>
+    <ROW File="modifiercompiler.to_charset.php" Component_="block.textformat.php" FileName="modif~23.php|modifiercompiler.to_charset.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.to_charset.php" SelfReg="false" NextFile="modifiercompiler.unescape.php"/>
+    <ROW File="modifiercompiler.unescape.php" Component_="block.textformat.php" FileName="modif~24.php|modifiercompiler.unescape.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.unescape.php" SelfReg="false" NextFile="modifiercompiler.upper.php"/>
+    <ROW File="modifiercompiler.upper.php" Component_="block.textformat.php" FileName="modif~25.php|modifiercompiler.upper.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.upper.php" SelfReg="false" NextFile="modifiercompiler.wordwrap.php"/>
+    <ROW File="modifiercompiler.wordwrap.php" Component_="block.textformat.php" FileName="modif~26.php|modifiercompiler.wordwrap.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\modifiercompiler.wordwrap.php" SelfReg="false" NextFile="outputfilter.trimwhitespace.php"/>
+    <ROW File="outputfilter.trimwhitespace.php" Component_="block.textformat.php" FileName="output~1.php|outputfilter.trimwhitespace.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\outputfilter.trimwhitespace.php" SelfReg="false" NextFile="shared.escape_special_chars.php"/>
+    <ROW File="package_info.tpl" Component_="delete_plugin.tpl" FileName="packag~1.tpl|package_info.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\package_info.tpl" SelfReg="false" NextFile="upgrade_plugin.tpl"/>
+    <ROW File="pdb_functions.inc" Component_="agent_password.inc" FileName="pdb_fu~1.inc|pdb_functions.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\pdb_functions.inc" SelfReg="false" NextFile="plugin_classes.inc"/>
+    <ROW File="plugin_classes.inc" Component_="agent_password.inc" FileName="plugin~1.inc|plugin_classes.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\plugin_classes.inc" SelfReg="false" NextFile="plugin_functions.inc"/>
+    <ROW File="plugin_functions.inc" Component_="agent_password.inc" FileName="plugin~2.inc|plugin_functions.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\plugin_functions.inc" SelfReg="false" NextFile="rcs_function.php"/>
+    <ROW File="rcs_function.php" Component_="agent_password.inc" FileName="rcs_fu~1.php|rcs_function.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\rcs_function.php" SelfReg="false" NextFile="uptime_functions.inc"/>
+    <ROW File="readme.txt" Component_="readme.txt" FileName="readme.txt" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\readme.txt" SelfReg="false" NextFile="delete_plugin.php_2"/>
+    <ROW File="resource.extendsall.php" Component_="cacheresource.apc.php" FileName="resour~1.php|resource.extendsall.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\resource.extendsall.php" SelfReg="false" NextFile="resource.mysql.php"/>
+    <ROW File="resource.mysql.php" Component_="cacheresource.apc.php" FileName="resour~2.php|resource.mysql.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\resource.mysql.php" SelfReg="false" NextFile="resource.mysqls.php"/>
+    <ROW File="resource.mysqls.php" Component_="cacheresource.apc.php" FileName="resour~3.php|resource.mysqls.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\plugins\resource.mysqls.php" SelfReg="false" NextFile="footer.tpl"/>
+    <ROW File="restart_core.bin" Component_="restart_core.bin" FileName="restar~1.bin|restart_core.bin" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\bin\restart_core.bin" SelfReg="false" NextFile="delete_plugin.php"/>
+    <ROW File="setup_directories.inc" Component_="delete_plugin.php" FileName="setup_~1.inc|setup_directories.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\setup_directories.inc" SelfReg="false" NextFile="upgrade_plugin.php"/>
+    <ROW File="setup_directories.inc_2" Component_="delete_plugin.php_2" FileName="setup_~1.inc|setup_directories.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\setup_directories.inc" SelfReg="false" NextFile="upgrade_plugin.php_2"/>
+    <ROW File="shared.escape_special_chars.php" Component_="block.textformat.php" FileName="shared~1.php|shared.escape_special_chars.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.escape_special_chars.php" SelfReg="false" NextFile="shared.literal_compiler_param.php"/>
+    <ROW File="shared.literal_compiler_param.php" Component_="block.textformat.php" FileName="shared~2.php|shared.literal_compiler_param.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.literal_compiler_param.php" SelfReg="false" NextFile="shared.make_timestamp.php"/>
+    <ROW File="shared.make_timestamp.php" Component_="block.textformat.php" FileName="shared~3.php|shared.make_timestamp.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.make_timestamp.php" SelfReg="false" NextFile="shared.mb_str_replace.php"/>
+    <ROW File="shared.mb_str_replace.php" Component_="block.textformat.php" FileName="shared~4.php|shared.mb_str_replace.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.mb_str_replace.php" SelfReg="false" NextFile="shared.mb_unicode.php"/>
+    <ROW File="shared.mb_unicode.php" Component_="block.textformat.php" FileName="shared~5.php|shared.mb_unicode.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.mb_unicode.php" SelfReg="false" NextFile="shared.mb_wordwrap.php"/>
+    <ROW File="shared.mb_wordwrap.php" Component_="block.textformat.php" FileName="shared~6.php|shared.mb_wordwrap.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\shared.mb_wordwrap.php" SelfReg="false" NextFile="variablefilter.htmlspecialchars.php"/>
+    <ROW File="smarty_cacheresource.php" Component_="smarty_cacheresource.php" FileName="smarty~1.php|smarty_cacheresource.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_cacheresource.php" SelfReg="false" NextFile="smarty_cacheresource_custom.php"/>
+    <ROW File="smarty_cacheresource_custom.php" Component_="smarty_cacheresource.php" FileName="smarty~2.php|smarty_cacheresource_custom.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_cacheresource_custom.php" SelfReg="false" NextFile="smarty_cacheresource_keyvaluestore.php"/>
+    <ROW File="smarty_cacheresource_keyvaluestore.php" Component_="smarty_cacheresource.php" FileName="smarty~3.php|smarty_cacheresource_keyvaluestore.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_cacheresource_keyvaluestore.php" SelfReg="false" NextFile="smarty_config_source.php"/>
+    <ROW File="smarty_config_source.php" Component_="smarty_cacheresource.php" FileName="smarty~4.php|smarty_config_source.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_config_source.php" SelfReg="false" NextFile="smarty_internal_cacheresource_file.php"/>
+    <ROW File="smarty_internal_cacheresource_file.php" Component_="smarty_cacheresource.php" FileName="smarty~5.php|smarty_internal_cacheresource_file.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_cacheresource_file.php" SelfReg="false" NextFile="smarty_internal_compilebase.php"/>
+    <ROW File="smarty_internal_compile_append.php" Component_="smarty_cacheresource.php" FileName="smarty~7.php|smarty_internal_compile_append.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_append.php" SelfReg="false" NextFile="smarty_internal_compile_assign.php"/>
+    <ROW File="smarty_internal_compile_assign.php" Component_="smarty_cacheresource.php" FileName="smarty~8.php|smarty_internal_compile_assign.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_assign.php" SelfReg="false" NextFile="smarty_internal_compile_block.php"/>
+    <ROW File="smarty_internal_compile_block.php" Component_="smarty_cacheresource.php" FileName="smarty~9.php|smarty_internal_compile_block.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_block.php" SelfReg="false" NextFile="smarty_internal_compile_break.php"/>
+    <ROW File="smarty_internal_compile_break.php" Component_="smarty_cacheresource.php" FileName="smart~10.php|smarty_internal_compile_break.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_break.php" SelfReg="false" NextFile="smarty_internal_compile_call.php"/>
+    <ROW File="smarty_internal_compile_call.php" Component_="smarty_cacheresource.php" FileName="smart~11.php|smarty_internal_compile_call.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_call.php" SelfReg="false" NextFile="smarty_internal_compile_capture.php"/>
+    <ROW File="smarty_internal_compile_capture.php" Component_="smarty_cacheresource.php" FileName="smart~12.php|smarty_internal_compile_capture.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_capture.php" SelfReg="false" NextFile="smarty_internal_compile_config_load.php"/>
+    <ROW File="smarty_internal_compile_config_load.php" Component_="smarty_cacheresource.php" FileName="smart~13.php|smarty_internal_compile_config_load.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_config_load.php" SelfReg="false" NextFile="smarty_internal_compile_continue.php"/>
+    <ROW File="smarty_internal_compile_continue.php" Component_="smarty_cacheresource.php" FileName="smart~14.php|smarty_internal_compile_continue.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_continue.php" SelfReg="false" NextFile="smarty_internal_compile_debug.php"/>
+    <ROW File="smarty_internal_compile_debug.php" Component_="smarty_cacheresource.php" FileName="smart~15.php|smarty_internal_compile_debug.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_debug.php" SelfReg="false" NextFile="smarty_internal_compile_eval.php"/>
+    <ROW File="smarty_internal_compile_eval.php" Component_="smarty_cacheresource.php" FileName="smart~16.php|smarty_internal_compile_eval.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_eval.php" SelfReg="false" NextFile="smarty_internal_compile_extends.php"/>
+    <ROW File="smarty_internal_compile_extends.php" Component_="smarty_cacheresource.php" FileName="smart~17.php|smarty_internal_compile_extends.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_extends.php" SelfReg="false" NextFile="smarty_internal_compile_for.php"/>
+    <ROW File="smarty_internal_compile_for.php" Component_="smarty_cacheresource.php" FileName="smart~18.php|smarty_internal_compile_for.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_for.php" SelfReg="false" NextFile="smarty_internal_compile_foreach.php"/>
+    <ROW File="smarty_internal_compile_foreach.php" Component_="smarty_cacheresource.php" FileName="smart~19.php|smarty_internal_compile_foreach.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_foreach.php" SelfReg="false" NextFile="smarty_internal_compile_function.php"/>
+    <ROW File="smarty_internal_compile_function.php" Component_="smarty_cacheresource.php" FileName="smart~20.php|smarty_internal_compile_function.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_function.php" SelfReg="false" NextFile="smarty_internal_compile_if.php"/>
+    <ROW File="smarty_internal_compile_if.php" Component_="smarty_cacheresource.php" FileName="smart~21.php|smarty_internal_compile_if.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_if.php" SelfReg="false" NextFile="smarty_internal_compile_include.php"/>
+    <ROW File="smarty_internal_compile_include.php" Component_="smarty_cacheresource.php" FileName="smart~22.php|smarty_internal_compile_include.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_include.php" SelfReg="false" NextFile="smarty_internal_compile_include_php.php"/>
+    <ROW File="smarty_internal_compile_include_php.php" Component_="smarty_cacheresource.php" FileName="smart~23.php|smarty_internal_compile_include_php.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_include_php.php" SelfReg="false" NextFile="smarty_internal_compile_insert.php"/>
+    <ROW File="smarty_internal_compile_insert.php" Component_="smarty_cacheresource.php" FileName="smart~24.php|smarty_internal_compile_insert.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_insert.php" SelfReg="false" NextFile="smarty_internal_compile_ldelim.php"/>
+    <ROW File="smarty_internal_compile_ldelim.php" Component_="smarty_cacheresource.php" FileName="smart~25.php|smarty_internal_compile_ldelim.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_ldelim.php" SelfReg="false" NextFile="smarty_internal_compile_nocache.php"/>
+    <ROW File="smarty_internal_compile_nocache.php" Component_="smarty_cacheresource.php" FileName="smart~26.php|smarty_internal_compile_nocache.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_nocache.php" SelfReg="false" NextFile="smarty_internal_compile_private_block_plugin.php"/>
+    <ROW File="smarty_internal_compile_private_block_plugin.php" Component_="smarty_cacheresource.php" FileName="smart~27.php|smarty_internal_compile_private_block_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_block_plugin.php" SelfReg="false" NextFile="smarty_internal_compile_private_function_plugin.php"/>
+    <ROW File="smarty_internal_compile_private_function_plugin.php" Component_="smarty_cacheresource.php" FileName="smart~28.php|smarty_internal_compile_private_function_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_function_plugin.php" SelfReg="false" NextFile="smarty_internal_compile_private_modifier.php"/>
+    <ROW File="smarty_internal_compile_private_modifier.php" Component_="smarty_cacheresource.php" FileName="smart~29.php|smarty_internal_compile_private_modifier.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_modifier.php" SelfReg="false" NextFile="smarty_internal_compile_private_object_block_function.php"/>
+    <ROW File="smarty_internal_compile_private_object_block_function.php" Component_="smarty_cacheresource.php" FileName="smart~30.php|smarty_internal_compile_private_object_block_function.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_object_block_function.php" SelfReg="false" NextFile="smarty_internal_compile_private_object_function.php"/>
+    <ROW File="smarty_internal_compile_private_object_function.php" Component_="smarty_cacheresource.php" FileName="smart~31.php|smarty_internal_compile_private_object_function.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_object_function.php" SelfReg="false" NextFile="smarty_internal_compile_private_print_expression.php"/>
+    <ROW File="smarty_internal_compile_private_print_expression.php" Component_="smarty_cacheresource.php" FileName="smart~32.php|smarty_internal_compile_private_print_expression.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_print_expression.php" SelfReg="false" NextFile="smarty_internal_compile_private_registered_block.php"/>
+    <ROW File="smarty_internal_compile_private_registered_block.php" Component_="smarty_cacheresource.php" FileName="smart~33.php|smarty_internal_compile_private_registered_block.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_registered_block.php" SelfReg="false" NextFile="smarty_internal_compile_private_registered_function.php"/>
+    <ROW File="smarty_internal_compile_private_registered_function.php" Component_="smarty_cacheresource.php" FileName="smart~34.php|smarty_internal_compile_private_registered_function.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_registered_function.php" SelfReg="false" NextFile="smarty_internal_compile_private_special_variable.php"/>
+    <ROW File="smarty_internal_compile_private_special_variable.php" Component_="smarty_cacheresource.php" FileName="smart~35.php|smarty_internal_compile_private_special_variable.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_private_special_variable.php" SelfReg="false" NextFile="smarty_internal_compile_rdelim.php"/>
+    <ROW File="smarty_internal_compile_rdelim.php" Component_="smarty_cacheresource.php" FileName="smart~36.php|smarty_internal_compile_rdelim.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_rdelim.php" SelfReg="false" NextFile="smarty_internal_compile_section.php"/>
+    <ROW File="smarty_internal_compile_section.php" Component_="smarty_cacheresource.php" FileName="smart~37.php|smarty_internal_compile_section.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_section.php" SelfReg="false" NextFile="smarty_internal_compile_setfilter.php"/>
+    <ROW File="smarty_internal_compile_setfilter.php" Component_="smarty_cacheresource.php" FileName="smart~38.php|smarty_internal_compile_setfilter.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_setfilter.php" SelfReg="false" NextFile="smarty_internal_compile_while.php"/>
+    <ROW File="smarty_internal_compile_while.php" Component_="smarty_cacheresource.php" FileName="smart~39.php|smarty_internal_compile_while.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compile_while.php" SelfReg="false" NextFile="smarty_internal_config.php"/>
+    <ROW File="smarty_internal_compilebase.php" Component_="smarty_cacheresource.php" FileName="smarty~6.php|smarty_internal_compilebase.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_compilebase.php" SelfReg="false" NextFile="smarty_internal_compile_append.php"/>
+    <ROW File="smarty_internal_config.php" Component_="smarty_cacheresource.php" FileName="smart~40.php|smarty_internal_config.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_config.php" SelfReg="false" NextFile="smarty_internal_configfilelexer.php"/>
+    <ROW File="smarty_internal_config_file_compiler.php" Component_="smarty_cacheresource.php" FileName="smart~43.php|smarty_internal_config_file_compiler.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_config_file_compiler.php" SelfReg="false" NextFile="smarty_internal_data.php"/>
+    <ROW File="smarty_internal_configfilelexer.php" Component_="smarty_cacheresource.php" FileName="smart~41.php|smarty_internal_configfilelexer.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_configfilelexer.php" SelfReg="false" NextFile="smarty_internal_configfileparser.php"/>
+    <ROW File="smarty_internal_configfileparser.php" Component_="smarty_cacheresource.php" FileName="smart~42.php|smarty_internal_configfileparser.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_configfileparser.php" SelfReg="false" NextFile="smarty_internal_config_file_compiler.php"/>
+    <ROW File="smarty_internal_data.php" Component_="smarty_cacheresource.php" FileName="smart~44.php|smarty_internal_data.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_data.php" SelfReg="false" NextFile="smarty_internal_debug.php"/>
+    <ROW File="smarty_internal_debug.php" Component_="smarty_cacheresource.php" FileName="smart~45.php|smarty_internal_debug.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_debug.php" SelfReg="false" NextFile="smarty_internal_filter_handler.php"/>
+    <ROW File="smarty_internal_filter_handler.php" Component_="smarty_cacheresource.php" FileName="smart~46.php|smarty_internal_filter_handler.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_filter_handler.php" SelfReg="false" NextFile="smarty_internal_function_call_handler.php"/>
+    <ROW File="smarty_internal_function_call_handler.php" Component_="smarty_cacheresource.php" FileName="smart~47.php|smarty_internal_function_call_handler.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_function_call_handler.php" SelfReg="false" NextFile="smarty_internal_get_include_path.php"/>
+    <ROW File="smarty_internal_get_include_path.php" Component_="smarty_cacheresource.php" FileName="smart~48.php|smarty_internal_get_include_path.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_get_include_path.php" SelfReg="false" NextFile="smarty_internal_nocache_insert.php"/>
+    <ROW File="smarty_internal_nocache_insert.php" Component_="smarty_cacheresource.php" FileName="smart~49.php|smarty_internal_nocache_insert.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_nocache_insert.php" SelfReg="false" NextFile="smarty_internal_parsetree.php"/>
+    <ROW File="smarty_internal_parsetree.php" Component_="smarty_cacheresource.php" FileName="smart~50.php|smarty_internal_parsetree.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_parsetree.php" SelfReg="false" NextFile="smarty_internal_resource_eval.php"/>
+    <ROW File="smarty_internal_resource_eval.php" Component_="smarty_cacheresource.php" FileName="smart~51.php|smarty_internal_resource_eval.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_eval.php" SelfReg="false" NextFile="smarty_internal_resource_extends.php"/>
+    <ROW File="smarty_internal_resource_extends.php" Component_="smarty_cacheresource.php" FileName="smart~52.php|smarty_internal_resource_extends.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_extends.php" SelfReg="false" NextFile="smarty_internal_resource_file.php"/>
+    <ROW File="smarty_internal_resource_file.php" Component_="smarty_cacheresource.php" FileName="smart~53.php|smarty_internal_resource_file.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_file.php" SelfReg="false" NextFile="smarty_internal_resource_php.php"/>
+    <ROW File="smarty_internal_resource_php.php" Component_="smarty_cacheresource.php" FileName="smart~54.php|smarty_internal_resource_php.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_php.php" SelfReg="false" NextFile="smarty_internal_resource_registered.php"/>
+    <ROW File="smarty_internal_resource_registered.php" Component_="smarty_cacheresource.php" FileName="smart~55.php|smarty_internal_resource_registered.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_registered.php" SelfReg="false" NextFile="smarty_internal_resource_stream.php"/>
+    <ROW File="smarty_internal_resource_stream.php" Component_="smarty_cacheresource.php" FileName="smart~56.php|smarty_internal_resource_stream.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_stream.php" SelfReg="false" NextFile="smarty_internal_resource_string.php"/>
+    <ROW File="smarty_internal_resource_string.php" Component_="smarty_cacheresource.php" FileName="smart~57.php|smarty_internal_resource_string.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_resource_string.php" SelfReg="false" NextFile="smarty_internal_smartytemplatecompiler.php"/>
+    <ROW File="smarty_internal_smartytemplatecompiler.php" Component_="smarty_cacheresource.php" FileName="smart~58.php|smarty_internal_smartytemplatecompiler.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_smartytemplatecompiler.php" SelfReg="false" NextFile="smarty_internal_template.php"/>
+    <ROW File="smarty_internal_template.php" Component_="smarty_cacheresource.php" FileName="smart~59.php|smarty_internal_template.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_template.php" SelfReg="false" NextFile="smarty_internal_templatebase.php"/>
+    <ROW File="smarty_internal_templatebase.php" Component_="smarty_cacheresource.php" FileName="smart~60.php|smarty_internal_templatebase.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_templatebase.php" SelfReg="false" NextFile="smarty_internal_templatecompilerbase.php"/>
+    <ROW File="smarty_internal_templatecompilerbase.php" Component_="smarty_cacheresource.php" FileName="smart~61.php|smarty_internal_templatecompilerbase.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_templatecompilerbase.php" SelfReg="false" NextFile="smarty_internal_templatelexer.php"/>
+    <ROW File="smarty_internal_templatelexer.php" Component_="smarty_cacheresource.php" FileName="smart~62.php|smarty_internal_templatelexer.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_templatelexer.php" SelfReg="false" NextFile="smarty_internal_templateparser.php"/>
+    <ROW File="smarty_internal_templateparser.php" Component_="smarty_cacheresource.php" FileName="smart~63.php|smarty_internal_templateparser.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_templateparser.php" SelfReg="false" NextFile="smarty_internal_utility.php"/>
+    <ROW File="smarty_internal_utility.php" Component_="smarty_cacheresource.php" FileName="smart~64.php|smarty_internal_utility.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_utility.php" SelfReg="false" NextFile="smarty_internal_write_file.php"/>
+    <ROW File="smarty_internal_write_file.php" Component_="smarty_cacheresource.php" FileName="smart~65.php|smarty_internal_write_file.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_internal_write_file.php" SelfReg="false" NextFile="smarty_resource.php"/>
+    <ROW File="smarty_resource.php" Component_="smarty_cacheresource.php" FileName="smart~66.php|smarty_resource.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_resource.php" SelfReg="false" NextFile="smarty_resource_custom.php"/>
+    <ROW File="smarty_resource_custom.php" Component_="smarty_cacheresource.php" FileName="smart~67.php|smarty_resource_custom.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_resource_custom.php" SelfReg="false" NextFile="smarty_resource_recompiled.php"/>
+    <ROW File="smarty_resource_recompiled.php" Component_="smarty_cacheresource.php" FileName="smart~68.php|smarty_resource_recompiled.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_resource_recompiled.php" SelfReg="false" NextFile="smarty_resource_uncompiled.php"/>
+    <ROW File="smarty_resource_uncompiled.php" Component_="smarty_cacheresource.php" FileName="smart~69.php|smarty_resource_uncompiled.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_resource_uncompiled.php" SelfReg="false" NextFile="smarty_security.php"/>
+    <ROW File="smarty_security.php" Component_="smarty_cacheresource.php" FileName="smart~70.php|smarty_security.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\sysplugins\smarty_security.php" SelfReg="false" NextFile="README"/>
+    <ROW File="test.conf" Component_="test.conf" FileName="test~1.con|test.conf" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\demo\configs\test.conf" SelfReg="false" NextFile="index.php"/>
+    <ROW File="upgrade_plugin.php" Component_="delete_plugin.php" FileName="upgrad~1.php|upgrade_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\upgrade_plugin.php" SelfReg="false" NextFile="uptime.css"/>
+    <ROW File="upgrade_plugin.php_2" Component_="delete_plugin.php_2" FileName="upgrad~1.php|upgrade_plugin.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\upgrade_plugin.php" SelfReg="false" NextFile="uptime.css_2"/>
+    <ROW File="upgrade_plugin.tpl" Component_="delete_plugin.tpl" FileName="upgrad~1.tpl|upgrade_plugin.tpl" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-GUI-templates\upgrade_plugin.tpl" SelfReg="false" NextFile="agent_password.inc"/>
+    <ROW File="uptime.css" Component_="delete_plugin.php" FileName="uptime.css" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\uptime.css" SelfReg="false"/>
+    <ROW File="uptime.css_2" Component_="delete_plugin.php_2" FileName="uptime.css" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\GUI\plugin_manager\uptime.css" SelfReg="false" NextFile="change_log.txt"/>
+    <ROW File="uptime_functions.inc" Component_="agent_password.inc" FileName="uptime~1.inc|uptime_functions.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\uptime_functions.inc" SelfReg="false" NextFile="uptime_lax_functions.inc"/>
+    <ROW File="uptime_lax_functions.inc" Component_="agent_password.inc" FileName="uptime~2.inc|uptime_lax_functions.inc" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\uptime_lax_functions.inc" SelfReg="false" NextFile="restart_core.bin"/>
+    <ROW File="variablefilter.htmlspecialchars.php" Component_="block.textformat.php" FileName="variab~1.php|variablefilter.htmlspecialchars.php" Attributes="0" SourcePath="M:\jpereira\FILES\install_plugin_manager\plugin_manager\Smarty-3.1.8\libs\plugins\variablefilter.htmlspecialchars.php" SelfReg="false" NextFile="Smarty.class.php"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="PluginManagerFiles" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\..\..\..\..\..\uptime\GUI\favicon.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" ExtUI="true" ExeName="up.time Plugin Manager"/>
+    <ATTRIBUTE name="CurrentBuild" value="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DigCertStoreComponent">
+    <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignOptions="0" SignTool="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;air\fragments\FolderDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;air\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="SetupTypeDlg.aip" Path="&lt;AI_THEMES&gt;air\fragments\SetupTypeDlg.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;air\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="UPTIMEDIR" Signature_="AppSearchSign"/>
+    <ROW Property="RESULT_PROPERTY" Signature_="FileSearchSign"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ATTRIBUTE name="FixedSizeBitmaps" value="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="SetupTypeDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="299"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="2"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CustomButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="301"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="2"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_ViewReadme" Type="1" Source="aicustact.dll" Target="[#readme.txt]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[UPTIMEDIR]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="favicon.exe" SourcePath="..\..\..\..\..\..\uptime\GUI\favicon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="Not Installed" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="201"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &gt;= 1))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 1))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 2))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 3))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 4))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 5))) AND ((VersionNT &lt;&gt; 400) OR ((VersionNT = 400) AND (ServicePackLevel &lt;&gt; 6))) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]" DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="UPTIMEDIR" Description="The up.time monitoring station was not detected. Make sure you install the monitoring station first."/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AppSearchSign" Root="2" Key="SOFTWARE\uptime software\up.time" Name="installPath" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="CmdsPassword" Root="2" Key="SOFTWARE\Wow6432Node\uptime software\up.time agent" Name="CmdsPassword" Value="UP!P@$$w0rd" Component_="CmdsPassword"/>
+    <ROW Registry="CmdsPassword_1" Root="2" Key="SOFTWARE\uptime software\up.time agent" Name="CmdsPassword" Value="UP!P@$$w0rd" Component_="CmdsPassword_1"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="This installer database contains the logic and data required to install [ProductName]." Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="1.0.6" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="http://support.uptimesoftware.com/the-grid" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
+    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /I [ProductCode]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="uptime software" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode]" Component_="AI_CustomARPName"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiServCtrlComponent">
+    <ROW ServiceControl="ServiceName" Name="up.time Agent" Event="3" Wait="1" Component_="CmdsPassword_1"/>
+    <ROW ServiceControl="ServiceName_1" Name="up.time Agent" Event="3" Wait="1" Component_="CmdsPassword"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="readme.txt" Directory_="SHORTCUTDIR" Name="readme.txt" Component_="readme.txt" Target="[#readme.txt]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="plugin_manager_Dir" Advertised="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiSignatureComponent">
+    <ROW Signature="FileSearchSign" FileName="YourFile.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="air"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMax="[|ProductVersion]" Attributes="1025" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

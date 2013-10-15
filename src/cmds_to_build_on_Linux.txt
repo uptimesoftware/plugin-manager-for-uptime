@@ -1,0 +1,3 @@
+./get_files.sh
+tar -zcvf uptime_plugin_manager-v1.0.X-posix.tar.gz plugin_manager plugin_manager_installer.sh
+cp uptime_plugin_manager-v* /mount/home/jpereira/FILES/install_plugin_manager/.

@@ -1,0 +1,15 @@
+v1.0.104
+- removed full URL from the uptime configuration section as it is unnecessary (relative path works better)
+
+v1.0.103
+- fixed bug where all files going into wrapper.conf (*.jar) instead of just core jars (Win version)
+- fixed bug when deleting a monitor would not delete any of it's files (both versions)
+
+v1.0.102
+- fixed non-standard apache path issue for (posix version)
+
+v1.0.101
+- fixed permissions setting on binary (.sh, .php, etc) files on (posix version)
+
+v1.0.100
+- Initial Release!
