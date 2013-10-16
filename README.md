@@ -1,9 +1,15 @@
 # Plug-in Manager for up.time
-## Tags : plugin   setup  
 
-## Category: plugin
+See http://uptimesoftware.github.io for more information.
 
-##Version Compatibility<br/>Module Name</th><th>up.time Monitoring Station Version</th>
+### Tags 
+ plugin   setup  
+
+### Category
+
+{ page.category }}
+
+### Version Compatibility
 
 
   
@@ -19,14 +25,31 @@
   
 
 
-### Description: 
-### Supported Monitoring Stations: 
-### Supported Agents: 
-### Installation Notes: <p>n/a</p>
+### Description
 
-### Dependencies: <p>n/a</p>
 
-### Input Variables: 
-### Output Variables: 
-### Languages Used: 
+### Supported Monitoring Stations
+
+
+
+### Supported Agents
+
+
+### Installation Notes
+<p>n/a</p>
+
+
+### Dependencies
+<p>n/a</p>
+
+
+### Input Variables
+
+
+### Output Variables
+
+
+
+### Languages Used
+
 
