@@ -1,6 +1,6 @@
 ## Plug-in Manager
 
-![Image](https://github.com/uptimesoftware/uptime-plugin-manager/blob/master/plugin_manager.png?raw=true)
+![Image](https://github.com/uptimesoftware/plugin-manager-for-uptime/blob/master/plugin_manager.png?raw=true)
 
 ### Version Compatibility
 
