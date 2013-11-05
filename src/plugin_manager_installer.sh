@@ -5,7 +5,7 @@
 ##################################################################
 # Variables
 #
-VERSION=1.1.1
+VERSION=1.2.0
 PRODNAME="Plugin Manager"
 UPTIMEDIR="/usr/local/uptime"
 PLUGMANDIR="plugin_manager"
@@ -96,16 +96,34 @@ rm -rf $UPTIMEDIR/GUI/$PLUGMANDIR
 
 cp -rf ./$PLUGMANDIR/ $UPTIMEDIR/.
 cp -rf $UPTIMEDIR/$PLUGMANDIR/GUI/$PLUGMANDIR/ $UPTIMEDIR/GUI/.
+cp -f $UPTIMEDIR/$PLUGMANDIR/mibs/* $UPTIMEDIR/mibs/
 
 echo "Setting permissions."
 chown -R uptime $UPTIMEDIR/$PLUGMANDIR
 chown -R uptime $UPTIMEDIR/GUI/$PLUGMANDIR
+chown -R uptime:uptime $UPTIMEDIR/mibs
 
 chmod 755 $UPTIMEDIR/$PLUGMANDIR/*.php $UPTIMEDIR/$PLUGMANDIR/*.sh
 chmod 755 $UPTIMEDIR/GUI/$PLUGMANDIR/*.php
+chmod 755 $UPTIMEDIR/mibs/*
 
 chown root $UPTIMEDIR/$PLUGMANDIR/bin/*
 chmod 4755 $UPTIMEDIR/$PLUGMANDIR/bin/*
+
+if [ -f /etc/redhat-release ]
+then
+    NUM_WORDS=`cat /etc/redhat-release |wc -w`
+    VERSION_POS=`expr ${NUM_WORDS} - 1`
+    REDHAT_VERSION=`cat /etc/redhat-release |cut -d\  -f ${VERSION_POS} | cut -d. -f 1`
+    if [ "${REDHAT_VERSION}" == "6" ]
+    then
+        cp $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux-6x.bin $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux.bin
+    else 
+        cp $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux-5x.bin $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux.bin
+    fi
+else
+    cp $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux-5x.bin $UPTIMEDIR/$PLUGMANDIR/bin/restart_core-linux.bin
+fi 
 
 if [ -d "$TEMPDBBACKUP" ] ; then
 	echo "Restoring backup of plugins."
@@ -113,12 +131,6 @@ if [ -d "$TEMPDBBACKUP" ] ; then
 	chown -R uptime $UPTIMEDIR/$PLUGMANDIR/db
 	rm -rf $TEMPDBBACKUP
 fi
-
-echo "Fixing PHP limitations."
-cd $UPTIMEDIR/$PLUGMANDIR; ./fix_php_limitations.sh
-echo "Restarting the up.time Web Server (uptime_httpd)."
-/etc/init.d/uptime_httpd stop
-/etc/init.d/uptime_httpd start
 
 
 HOSTNAME=`hostname`
